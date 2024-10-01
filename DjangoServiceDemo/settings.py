@@ -4,6 +4,9 @@ Django settings for DjangoServiceDemo project.
 
 from pathlib import Path
 
+SECRET_KEY = '0=gk8zfl_j&9l6)r_=vdvm-f+^*qc1yv%2bvu^xns80e0ut$*6'
+
+
 # Ruta base del proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
