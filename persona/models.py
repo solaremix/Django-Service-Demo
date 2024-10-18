@@ -10,4 +10,4 @@ class Persona(models.Model):
     direccion = models.CharField(max_length=255)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
+        return f'{self.nombre} {self.apellido}'

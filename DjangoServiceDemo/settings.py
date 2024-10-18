@@ -64,14 +64,20 @@ WSGI_APPLICATION = 'DjangoServiceDemo.wsgi.application'
 # Configuración de la base de datos (PostgreSQL)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ServiceDemoDB',  # Nombre de tu base de datos
-        'USER': 'postgres',       # Usuario de PostgreSQL
-        'PASSWORD': 'Starbucks2020',  # Contraseña de PostgreSQL
-        'HOST': 'localhost',      # Host de PostgreSQL
-        'PORT': '5432',           # Puerto de PostgreSQL
+        'ENGINE': 'ibm_db_django',
+        'NAME': 'demo',
+        'USER': 'informix',
+        'PASSWORD': 'in4mix',
+        'HOST': 'localhost',
+        'PORT': '9088',
+        'OPTIONS': {
+            'DRIVER': '{IBM INFORMIX ODBC DRIVER}',
+            'SERVER': 'informix', 
+            'PROTOCOL': 'onsoctcp'
+        }
     }
 }
+
 
 # Contraseña y validación del usuario
 AUTH_PASSWORD_VALIDATORS = [
@@ -89,12 +95,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Configuración de internacionalización
-LANGUAGE_CODE = 'es-es'
 
-TIME_ZONE = 'America/Lima'
 
-USE_I18N = True
+USE_I18N = False
+
 
 USE_TZ = True
 
